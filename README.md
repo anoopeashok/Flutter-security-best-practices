@@ -36,6 +36,12 @@ This section is about protecting the application's source code and integrity.
 
 ### Code Obfuscation
 Enable Dart Obfuscation using the --obfuscate and --split-debug-info flags during the release build. Use ProGuard/R8 rules for Android-side obfuscation.
+```
+flutter build <build-target> \
+   --obfuscate \
+   --split-debug-info=/<symbols-directory>
+
+```
 
 ### App Integrity Checks
 Implement checks for Root/Jailbreak detection and tamper detection using specialized packages or platform APIs.
