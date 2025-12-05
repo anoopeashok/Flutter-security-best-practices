@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:safe_device/safe_device.dart';
+import 'package:safe_device/safe_device_config.dart';
 
 void main() {
+  SafeDevice.init(
+    SafeDeviceConfig(mockLocationCheckEnabled: false), // disables mock location check on Android
+  );
   runApp(const MyApp());
 }
 
